@@ -1,5 +1,5 @@
-vertexFile = "shaderv2.vs"
-fragmentFile = "shaderf2.fs"
+vertexFile = "shaderv.vs"
+fragmentFile = "shaderf.fs"
 
 defaultVertex = lovr.filesystem.read(vertexFile)
 defaultFragment = lovr.filesystem.read(fragmentFile)
