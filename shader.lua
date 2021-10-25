@@ -1,5 +1,8 @@
-defaultVertex = lovr.filesystem.read("shaderv.vs")
-defaultFragment = lovr.filesystem.read("shaderf.fs")
+vertexFile = "shaderv.vs"
+fragmentFile = "shaderf.fs"
+
+defaultVertex = lovr.filesystem.read(vertexFile)
+defaultFragment = lovr.filesystem.read(fragmentFile)
 
 shader = lovr.graphics.newShader(defaultVertex, defaultFragment, {})
 
