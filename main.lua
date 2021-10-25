@@ -41,11 +41,12 @@ function lovr.update(dt)
 
     anglel = anglel + dt
 
-    lz = ldist * math.sin(anglel)
+    lz = ldist * math.sin(anglel) * -1.0
     ly = -.5
     lx = ldist * math.cos(anglel)
 
     shader:send('lightPos', {lx,ly,lz})
+    shader:send('viewPos',{camx,camy,camz})
 
 end
 
@@ -65,7 +66,7 @@ function lovr.draw()
     lovr.graphics.cube('fill',
                         lx,ly,lz,
                         .25,
-                        0,0,1,0)
+                        anglel,0,1,0)
                     
 
 end

@@ -4,7 +4,7 @@ fragmentFile = "shaderf.fs"
 defaultVertex = lovr.filesystem.read(vertexFile)
 defaultFragment = lovr.filesystem.read(fragmentFile)
 
-shader = lovr.graphics.newShader(defaultVertex, defaultFragment, {})
+shader = lovr.graphics.newShader(defaultVertex, defaultFragment)
 
 shader:send('ambience', { 0.05, 0.05, 0.05, 1.0 })
 shader:send('liteColor', {1.0,1.0,1.0,1.0})
